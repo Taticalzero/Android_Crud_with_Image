@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AddUpdateRecordActivity">
+
+   <com.google.android.material.imageview.ShapeableImageView
+       android:id="@+id/profileIV"
+       android:layout_width="120dp"
+       android:layout_height="120dp"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:scaleType="centerCrop"
+       app:shapeAppearanceOverlay="@style/Img_Circular"
+       android:src="@drawable/ic_addphoto"/>
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/edtLayoutNome"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+       android:layout_below="@+id/profileIV"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="15dp"
+       android:layout_marginEnd="15dp"
+       android:hint="Digite seu Nome"
+       app:counterEnabled="true"
+       app:counterMaxLength="21"
+       app:endIconMode="clear_text"
+       app:helperText="Requerido"
+       app:helperTextTextColor="@color/darkred"
+       app:startIconDrawable="@drawable/ic_person">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/nameEdt"
+          android:maxLength="20"
+          android:inputType="textPersonName|textCapWords"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/edtLayoutEmail"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+       android:layout_below="@+id/edtLayoutNome"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="15dp"
+       android:layout_marginEnd="15dp"
+       android:hint="Digite seu Email"
+       app:endIconMode="clear_text"
+       app:counterEnabled="false"
+       app:counterMaxLength="64"
+       app:helperText="Requerido"
+       app:helperTextTextColor="@color/darkred"
+       app:startIconDrawable="@drawable/ic_email">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/emailEdt"
+          android:maxLength="64"
+          android:inputType="textEmailAddress"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/edtLayoutSenha"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+       android:layout_below="@+id/edtLayoutEmail"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="15dp"
+       android:layout_marginEnd="15dp"
+       android:hint="Digite sua Senha"
+       app:counterEnabled="true"
+       app:counterMaxLength="16"
+       app:endIconMode="password_toggle"
+       app:helperText="Requerido"
+       app:helperTextTextColor="@color/darkred"
+       app:startIconDrawable="@drawable/ic_lock">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/senhaEdt"
+          android:maxLength="16"
+          android:inputType="textPassword"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/edtLayoutAge"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+       android:layout_below="@+id/edtLayoutSenha"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="15dp"
+       android:layout_marginEnd="15dp"
+       android:hint="Digite sua Idade"
+       app:counterEnabled="true"
+       app:counterMaxLength="2"
+       app:helperText="Requerido"
+       app:helperTextTextColor="@color/darkred"
+       app:startIconDrawable="@drawable/ic_person">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/idadeEdt"
+          android:maxLength="2"
+          android:inputType="text|numberDecimal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/edtLayoutTelefone"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+       android:layout_below="@+id/edtLayoutAge"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="15dp"
+       android:layout_marginEnd="15dp"
+       android:hint="Digite seu Telefone"
+       app:counterEnabled="true"
+       app:counterMaxLength="14"
+       app:prefixText="+55"
+       app:helperText="Requerido"
+       app:helperTextTextColor="@color/darkred"
+       app:startIconDrawable="@drawable/ic_telefone">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/telefoneEdt"
+          android:maxLength="14"
+          android:inputType="text|number"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/edtLayoutEndereco"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+       android:layout_below="@+id/edtLayoutTelefone"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="15dp"
+       android:layout_marginEnd="15dp"
+       android:hint="Digite seu Endereço"
+       app:counterEnabled="false"
+       app:counterMaxLength="64"
+       app:helperText="Requerido"
+       app:helperTextTextColor="@color/darkred"
+       app:startIconDrawable="@drawable/ic_endereco">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/enderecoEdt"
+          android:maxLength="64"
+          android:inputType="textPostalAddress"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+
+   </com.google.android.material.textfield.TextInputLayout>
+
+
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/saveBtn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentBottom="true"
+       android:layout_margin="10dp"
+       android:src="@drawable/ic_save"
+       tools:ignore="SpeakableTextPresentCheck" />
+
+
+</RelativeLayout>
